@@ -1,13 +1,15 @@
-<div class="row">
+<div class="imagen">
+    <div class="row">
+<div class="container">
    <div *ngFor="let character of characters">
-    <div class="card" style="width: 18rem;">
-        <img [src]="character.img">
-        <div class="card-body">
-          <h5 class="card-title">{{character.char_id}}</h5>
-          <p class="card-text">{{character.name}}</p>
-          <p class="card-text">{{character.occupation}}</p>
-          <a href="#" class="btn btn-primary">{{character.status}}</a>
+    <div class="card">
+        <img class="card-image" [src]="character.img" alt="100" height="400">
+        <div class="card-text">
+        <span class="data-id">personaje #{{character.char_id}}</span>
+          <h2>{{character.name}}</h2>
+          <p>{{character.occupation}}</p>
+          <a>{{character.status}}</a>
         </div>
       </div>
-  
+    </div></div></div>
 <router-outlet></router-outlet>
