@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,6 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class BbApiService {
 
-  constructor() { }
-  
-}
+  constructor(private http: HttpClient) { }
+
+  getAllCharacters() {
+    return this.http.get<any>("https://www.breakingbadapi.com/api/characters/");
+
+    }
+  }
+

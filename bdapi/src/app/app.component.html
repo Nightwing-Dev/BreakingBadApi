@@ -1,4 +1,13 @@
-
-<h3>hola </h3>
-<h2>golaaa</h2>
+<div class="row">
+   <div *ngFor="let character of characters">
+    <div class="card" style="width: 18rem;">
+        <img [src]="character.img">
+        <div class="card-body">
+          <h5 class="card-title">{{character.char_id}}</h5>
+          <p class="card-text">{{character.name}}</p>
+          <p class="card-text">{{character.occupation}}</p>
+          <a href="#" class="btn btn-primary">{{character.status}}</a>
+        </div>
+      </div>
+  
 <router-outlet></router-outlet>
